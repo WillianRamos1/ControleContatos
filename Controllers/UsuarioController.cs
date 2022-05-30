@@ -1,4 +1,5 @@
-﻿using ControleContatos.Models;
+﻿using ControleContatos.Filters;
+using ControleContatos.Models;
 using ControleContatos.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ControleContatos.Controllers
 {
+    [PaginaRestrita]
     public class UsuarioController : Controller
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;
